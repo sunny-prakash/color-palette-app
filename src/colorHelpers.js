@@ -8,7 +8,6 @@ function generatePalette(starterPalette) {
 		emoji: starterPalette.emoji,
 		colors: {},
 	};
-
 	for (let level of levels) {
 		newPalette.colors[level] = [];
 	}
@@ -17,7 +16,7 @@ function generatePalette(starterPalette) {
 		for (let i in scale) {
 			newPalette.colors[levels[i]].push({
 				name: `${color.name} ${levels[i]}`,
-				id: color.name.toLowercase().replace(/ /g, "-"),
+				id: color.name.toLowerCase().replace(/ /g, "-"),
 				hex: scale[i],
 				rgb: chroma(scale[i]).css(),
 				rgba: chroma(scale[i])
@@ -27,7 +26,6 @@ function generatePalette(starterPalette) {
 			});
 		}
 	}
-
 	return newPalette;
 }
 function getRange(hexColor) {
@@ -35,8 +33,8 @@ function getRange(hexColor) {
 	return [chroma(hexColor).darken(1.4).hex(), hexColor, end];
 }
 
-function getScale(hexColor, numberofColors) {
-	return chroma.scale(getRange(hexColor)).mode("lab").colors(numberofColors);
+function getScale(hexColor, numberOfColors) {
+	return chroma.scale(getRange(hexColor)).mode("lab").colors(numberOfColors);
 }
 
 export { generatePalette };
