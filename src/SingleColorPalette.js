@@ -23,9 +23,11 @@ class SingleColorPalette extends Component {
 		}
 		return shades.slice(1);
 	}
+
 	changeFormat = (val) => {
 		this.setState({ format: val });
 	};
+
 	render() {
 		const { format } = this.state;
 		const { paletteName, emoji, id } = this.props.palette;
@@ -38,6 +40,7 @@ class SingleColorPalette extends Component {
 				showingFullPalette={false}
 			/>
 		));
+
 		return (
 			<div className={classes.Palette}>
 				<Navbar handleChange={this.changeFormat} showingAllColors={false} />
