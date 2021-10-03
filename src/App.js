@@ -116,7 +116,6 @@ class App extends Component {
 										</Page>
 									)}
 								/>
-								<Redirect to="/" />
 							</Switch>
 						</CSSTransition>
 					</TransitionGroup>
