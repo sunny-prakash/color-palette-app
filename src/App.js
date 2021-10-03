@@ -53,7 +53,7 @@ class App extends Component {
 							<Switch location={location}>
 								<Route
 									exact
-									path="color-palette-app/palette/new"
+									path="/palette/new"
 									render={(routeProps) => (
 										<Page>
 											<NewPaletteForm
@@ -66,7 +66,7 @@ class App extends Component {
 								/>
 								<Route
 									exact
-									path="color-palette-app/palette/:paletteId/:colorId"
+									path="/palette/:paletteId/:colorId"
 									render={(routeProps) => (
 										<Page>
 											<SingleColorPalette
@@ -80,7 +80,7 @@ class App extends Component {
 								/>
 								<Route
 									exact
-									path="color-palette-app/"
+									path="/"
 									render={(routeProps) => (
 										<Page>
 											<PaletteList
@@ -93,7 +93,7 @@ class App extends Component {
 								/>
 								<Route
 									exact
-									path="color-palette-app/palette/:id"
+									path="/palette/:id"
 									render={(routeProps) => (
 										<Page>
 											<Palette
@@ -105,7 +105,7 @@ class App extends Component {
 									)}
 								/>
 								<Route
-									to="color-palette-app/"
+									to="/"
 									render={(routeProps) => (
 										<Page>
 											<PaletteList
@@ -116,7 +116,7 @@ class App extends Component {
 										</Page>
 									)}
 								/>
-								<Redirect to="color-palette-app/" />
+								<Redirect to="/" />
 							</Switch>
 						</CSSTransition>
 					</TransitionGroup>
