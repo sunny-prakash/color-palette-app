@@ -104,7 +104,7 @@ class App extends Component {
 										</Page>
 									)}
 								/>
-								{/* <Route
+								<Route
 									to="/"
 									render={(routeProps) => (
 										<Page>
@@ -115,8 +115,8 @@ class App extends Component {
 											/>
 										</Page>
 									)}
-								/> */}
-								<Redirect to="/" />
+								/>
+								{/* <Redirect to="/" /> */}
 							</Switch>
 						</CSSTransition>
 					</TransitionGroup>
